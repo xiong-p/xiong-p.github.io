@@ -11,5 +11,3 @@ tags:
 ---
 
 # XJX Hello World
-
-## About Optimization
