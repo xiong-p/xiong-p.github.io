@@ -24,7 +24,7 @@ tags:
 
 by Oriol Vinyals et al, 2017
 
-<img src="_posts/2022/11/example.png" alt="example of combinational optimization problems" style="zoom:50%;" />
+![test](https://github.com/xjx-xiong/xjx-xiong.github.io/_posts/2022/11/example.png)
 
 
 
