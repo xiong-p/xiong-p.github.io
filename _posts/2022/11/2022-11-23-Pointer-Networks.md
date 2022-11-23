@@ -56,15 +56,53 @@ $$
 
 ### RNN
 
-Uses a parametric model $p(C^\mathcal{P}|\mathcal{P}:\theta)$ to estimate the conditional probability, which can be decomposed using chain rule as $p(C^\mathcal{P}|\mathcal{P}:\theta) = \Pi_{i=1}^{m(\mathcal{P})}p_\theta(C_i|C_1, \cdots, C_{i-1}, \mathcal{P}:\theta)$, and the parameter is chosen to be the one that maximize the 
+Uses a parametric model 
+
+$$p(C^\mathcal{P}|\mathcal{P}:\theta)$$ 
+
+to estimate the conditional probability, which can be decomposed using chain rule as 
+
+$$p(C^\mathcal{P}|\mathcal{P}:\theta) = \Pi_{i=1}^{m(\mathcal{P})}p_\theta(C_i|C_1, \cdots, C_{i-1}, \mathcal{P}:\theta)$$
+
+, and the parameter is chosen to be the one that maximize the conditional probability.
+
+Note that the history is encoded into a single vector for the encoder. The fact show that models like RNN constraints the amount of information and computation that can flow through to the generative model.
+
+### Attention
+
+Let $$(e_1, \cdots, e_n)$$ be the encoder and $$(d_1, \cdots, d_{m(\mathcal{P})})$$ be the decoder hidden state. Then, instead of keep only one single state, the attention mechanism 
+
+- maintains all encoded input sequences visible for the decoder
+
+- compute the attention vector at each output time $$i$$ for the input sequence $$j$$ as 
+  $$
+  \begin{align*}
+  u^i_j &= v^T + \tanh(W_1 e_j + W_2d_i) \\
+  a_j^i &= softmax(u^i_j) \\ 
+  \end{align*}
+  $$
+  $$v, W_1, W_2$$ are learnable parameters.
+
+- get the decoder hidden state as the weighted some of the encoder vector
+  $$
+  d_j' = \sum_{j=1}^n a_j^ie_j
+  $$
 
 
-$$
 
-$$
+### Pointer Networks (Ptr-Net)
 
+Basically, combined the previous two ideas. Instead of using a parametric way to model the conditional probability, Prt-Net borrow the idea from Attention Mechanism, which directly point to the input sequence. The idea naturally solved the problems we proposed in the very beginning, that is, it is suitable for **problems whose outputs are discrete and correspond to position in the input.** (The starting token can be regarded as a learnable variable, generate untill encounter the stopping token. For the TSP problem, the author suggests to use beam search as the result may not be invalid, which is constriant).
 
+![examples](https://github.com/xjx-xiong/xjx-xiong.github.io/raw/master/_posts/2022/11/PtrNet.png)
 
+## Problems
+
+1. The network is trained in a supervised way, in which the label for the training data are generated from some existing exact or approximate algorithms. For the exact method, it may be too expensive to get a result for large problem. For the approximate algorithms, the performance of the network is connected to the results for the existing models. 
+
+# References
+
+Pointer Networks <https://arxiv.org/pdf/1506.03134.pdf>
 
 
 
