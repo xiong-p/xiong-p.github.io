@@ -54,7 +54,7 @@ C^{\mathcal{P}} &= \{C_1, \cdots, C_{m(\mathcal{P}})\} \text{ the output vector}
 \end{align*}
 $$
 
-<!-- ### RNN
+### RNN
 
 Uses a parametric model 
 
@@ -103,23 +103,6 @@ Basically, combined the previous two ideas. Instead of using a parametric way to
 # References
 
 Pointer Networks <https://arxiv.org/pdf/1506.03134.pdf>
-
-
-
- -->
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
