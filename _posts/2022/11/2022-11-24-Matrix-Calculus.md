@@ -101,7 +101,7 @@ $$
 
 ## Rules
 
-1. ###### Composition
+###### Composition
 
    $$f:\mathbb{R}^n \to \mathbb{R}^k, g: \mathbb{R}^k \to \mathbb{R}^m$$
 
@@ -111,13 +111,13 @@ $$
 d f(g(x)) = \nabla f(g(x))^T dg(x) = \nabla f(g(x))^T \nabla g(x)^T dx \Rightarrow \nabla f(g(x)) = \nabla g(x) \nabla f(g(x))
 $$
 
-2. ###### Product
+###### Product
 
 $$
 d[fg] = f \cdot d[g] + d[f] \cdot g
 $$
 
-3. ###### Transpose
+###### Transpose
 
    $$
    d[x^T] = (d[x])^T
@@ -127,7 +127,7 @@ $$
 
 ## Examples
 
-### 1. $$f(x) = Ax$$
+###### $$f(x) = Ax$$
 
 $$
 df(x)=d[Ax] = A dx \\
@@ -136,7 +136,7 @@ $$
 
 
 
-### 2. $$f(x) = \|x\|^2$$
+###### $$f(x) = \|x\|^2$$
 
 $$
 \begin{align*}
@@ -149,7 +149,7 @@ $$
 \end{align*}
 $$
 
-### 3. $$f(x) = x^T A x$$
+###### $$f(x) = x^T A x$$
 
 $$
 \begin{align*}
@@ -163,7 +163,7 @@ d[x^T A x] &= x^T \cdot d[Ax] + d[x^T] \cdot Ax \\
 \end{align*}
 $$
 
-### 4. $$f(x) = (x^Tx)x$$
+######$$f(x) = (x^Tx)x$$
 
 $$
 \begin{align*}
