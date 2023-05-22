@@ -1,0 +1,39 @@
+```
+git push origin master
+```
+jekyll serve --watch
+
+https://github.com/xiong-p/xiong-p.github.io/raw/master/_posts/
+
+
+for posts: 
+	create folder year/month/postname/ 
+							- md file
+							- asset folder for images
+	use relative path to insert images
+	after commit
+	replace all relative paths by the github image link
+
+the header image should be included in the img folder img/xxx/xxx
+
+
+
+after writing, include the following template setting at the beginning of the markdown file
+---
+layout: post
+
+title: "Matrix Calculus"
+
+subtitle: ""
+
+author: ""
+
+header-img: "img/home-bg-art.jpg"
+
+header-mask: 0.2
+
+published: true
+
+tags:
+- Linear Algebra
+---
