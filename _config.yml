@@ -1,11 +1,11 @@
 # Site settings
-title: XJX Blog
-SEOTitle: XJX的博客 | XJX Blog
+title: JX Blog
+SEOTitle: XJX的博客 | JX Blog
 header-img: img/home-bg.jpg
-email: jx2383@columbia.edu
-description: "这里是 @XJX 的个人博客"
-keyword: "XJX"
-url: "https://xjx-xiong.github.io/" # your host, for absolute URL
+email:
+description: "这里是 @JX 的个人博客"
+keyword: "JX"
+url: "https://xiong-p.github.io/" # your host, for absolute URL
 baseurl: "" # for example, '/blog' if your blog hosted on 'host/blog'
 
 # Publish posts or collection documents with a future date.
@@ -13,10 +13,10 @@ future: true
 
 # SNS settings
 RSS: false
-weibo_username: xjxpro
-zhihu_username: xjxpro
-github_username: xjxpro
-twitter_username: xjxpro
+weibo_username: jxpro
+zhihu_username: jxpro
+github_username: jxpro
+twitter_username: jxpro
 #facebook_username:  huxpro
 #linkedin_username:  firstname-lastname-idxxxx
 
@@ -59,7 +59,7 @@ kramdown:
       start_line: 1
 
 # Disqus settings
-disqus_username: xjx
+disqus_username: jx
 
 # Netease settings
 netease_comment: false
@@ -70,12 +70,12 @@ netease_comment: false
 
 # Google Analytics
 ga_track_id: "UA-xxxxxx-xx" # Format: UA-xxxxxx-xx
-ga_domain: xjx-xiong.github.io
+ga_domain: xiong-p.github.io
 
 # Sidebar settings
 sidebar: true # whether or not using Sidebar.
-sidebar-about-description: "XJX"
-sidebar-avatar: https://github.com/xjx-xiong.png # use absolute URL, seeing it's used in both `/` and `/about/`
+sidebar-about-description: "JX"
+sidebar-avatar: https://github.com/xiong-p.png # use absolute URL, seeing it's used in both `/` and `/about/`
 
 
 # Featured Tags
